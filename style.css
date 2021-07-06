@@ -1,0 +1,32 @@
+#container {
+    position: relative;
+    left: 50%;
+    margin-left: -390px;
+    width: 780px;
+    margin: 5px auto;
+    padding: 10px 0;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #071419;
+    border-radius: 12px;
+}
+
+h1 {
+    font-variant: small-caps;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: large;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+}
+
+[type=Button] {
+    background-color: #6E7B91;
+    color: #FFF;
+    border: 1.5px solid #333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1.5px 12px;
+    margin: 0.4px
+}
