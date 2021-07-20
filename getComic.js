@@ -18,6 +18,11 @@ function getComicImg(item) {
     return comicImg
 }
 
+function getComicAlt(item) {
+    const comicAlt = item.alt;
+    return comicAlt
+}
+
 
 async function updateComics(btnID) {
     const comicList = document.querySelector('#comicList');
@@ -49,7 +54,7 @@ async function updateComics(btnID) {
                 const item = document.createElement('li');
                 item.className = "p-6";
                 item.innerHTML = `
-                <img src="${getComicImg(comic)}">
+                <img src="${getComicImg(comic)}" alt="${getComicAlt(comic)}">
                 `;
                 comicList.appendChild(item);
             });
