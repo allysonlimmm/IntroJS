@@ -1,5 +1,5 @@
 // GETTING COMIC //
-async function getComic(comicNum) {
+async function getComic(comicNum=2) {
     let dataList = [];
     for (let i = comicNum-1; i <= comicNum+1; i++) {
         const data = await fetch(`https://intro-to-js-playground.vercel.app/api/xkcd-comics/${i}`);
@@ -28,15 +28,15 @@ async function updateComics(btnID) {
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
-    let comicNum = 1;
+    let comicNum = 2;
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID="prevBtn") {
-            if (comicNum > 1) {
+            if (comicNum > 3) {
                 comicNum -=1;
             }
             else {
-                comicNum = 1;
+                comicNum = 2;
             }
         }
         else if (btnID="randBtn") {
