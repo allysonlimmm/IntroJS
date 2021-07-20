@@ -47,7 +47,7 @@ async function updateComics(btnID) {
         }
     })
 
-    getComic(comicNum)
+    await getComic(comicNum)
         .then((data) => {
             comicList.innerHTML = '';
             data.forEach((comic) => {
