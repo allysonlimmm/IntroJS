@@ -47,7 +47,7 @@ async function updateComics(btnID) {
         }
     })
 
-    let data = getComic(comicNum)
+    getComic(comicNum)
         .then((data) => {
             comicList.innerHTML = '';
             data.forEach((comic) => {
