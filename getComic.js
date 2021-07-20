@@ -9,17 +9,17 @@ async function getComic(comicNum=2) {
 }
 
 function getComicTitle(item) {
-    const comicTitle = item[title];
+    const comicTitle = item['title'];
     return comicTitle
 }
 
 function getComicImg(item) {
-    const comicImg = item[img];
+    const comicImg = item['img'];
     return comicImg
 }
 
 function getComicAlt(item) {
-    const comicAlt = item[alt];
+    const comicAlt = item['alt'];
     return comicAlt
 }
 
