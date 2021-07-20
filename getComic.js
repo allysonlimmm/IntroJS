@@ -51,7 +51,7 @@ async function updateComics(btnID) {
         .then((data) => {
             comicList.innerHTML = '';
             data.forEach((comic) => {
-                const item = document.createElement();
+                const item = document.createElement("div");
                 item.className = "column";
                 item.innerHTML = `
                 <img src="${getComicImg(comic)}" alt="${getComicAlt(comic)}">
