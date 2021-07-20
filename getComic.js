@@ -27,7 +27,12 @@ async function updateComics(btnID) {
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID="prevBtn") {
-            comicNum -=1
+            if (comicNum > 1) {
+                comicNum -=1;
+            }
+            else {
+                comicNum = 1;
+            }
         }
         else if (btnID="randBtn") {
             comicNum = Math.floor(Math.random() * 10000) + 1;
@@ -37,18 +42,19 @@ async function updateComics(btnID) {
         }
     })
 
-    let data = getComic(comicNum);
-
-    comicList.innerHTML = '';
-    data.forEach((comic) => {
-        const item = document.createElement('li');
-        item.className = "p-6";
-        item.innerHTML = `
-        <img src="${getComicImg(comic)}">
-        `;
-        comicList.appendChild(item);
-    });
-    comicTitle.innerText = getComicTitle(data[1]);
+    let data = getComic(comicNum)
+        .then((data) => {
+            comicList.innerHTML = '';
+            data.forEach((comic) => {
+                const item = document.createElement('li');
+                item.className = "p-6";
+                item.innerHTML = `
+                <img src="${getComicImg(comic)}">
+                `;
+                comicList.appendChild(item);
+            });
+            comicTitle.innerText = getComicTitle(data[1]);
+        });
 }
 
 updateComics('prevBtn');
