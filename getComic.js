@@ -1,22 +1,22 @@
 // GETTING COMIC //
-(async function getComic(comicNum) {
+async function getComic(comicNum) {
     let dataList = [];
     for (let i = comicNum-1; i <= comicNum+1; i++) {
         const data = await fetch(`https://intro-to-js-playground.vercel.app/api/xkcd-comics/${i}`);
         dataList.push(data.json());
     }
     return dataList;
-})();
+}
 
-(function getComicTitle(item) {
+function getComicTitle(item) {
     const comicTitle = item.title;
     return comicTitle
-})();
+}
 
-(function getComicImg(item) {
+function getComicImg(item) {
     const comicImg = item.img;
     return comicImg
-})();
+}
 
 
 async function updateComics(btnID) {
