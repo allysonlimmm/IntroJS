@@ -1,5 +1,5 @@
 // GETTING COMIC //
-async function getComic(comicNum=2) {
+async function getComic(comicNum) {
     let dataList = [];
     for (let i = comicNum-1; i <= comicNum+1; i++) {
         const data = await fetch(`https://intro-to-js-playground.vercel.app/api/xkcd-comics/${i}`);
