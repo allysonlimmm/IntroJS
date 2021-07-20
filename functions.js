@@ -1,5 +1,5 @@
 // GETTING COMIC //
-function getComic(comicNum) {
+function getComic(comicNum = 1) {
     var request = new XMLHttpRequest();
     request.open('GET', `https://intro-to-js-playground.vercel.app/api/xkcd-comics/${comicNum}`, true);
     var data = JSON.parse(this.response);
