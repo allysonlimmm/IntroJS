@@ -47,10 +47,11 @@ async function updateComics(btnID) {
         }
     })
 
-    getComic(comicNum)
+    
     $("#loadingDiv").show()
+    await getComic(comicNum)
         .then((data) => {
-            $("loadingDiv").hide();
+            $("loadingDiv").hide().delay(2000);
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
