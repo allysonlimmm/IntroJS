@@ -49,10 +49,10 @@ async function updateComics(btnID) {
     })
 
     
-    loading.show();
+    loading.classList.remove("hidden")
     await getComic(comicNum)
         .then((data) => {
-            loading.hide().delay(2000);
+            loading.classList.add("hidden");
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
