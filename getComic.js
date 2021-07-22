@@ -24,7 +24,7 @@ function getComicAlt(item) {
 }
 
 
-async function updateComics(btnID, comicNum) {
+async function updateComics(btnID, comicNum=2) {
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
