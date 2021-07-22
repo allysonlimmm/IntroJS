@@ -46,7 +46,7 @@ async function updateComics(btnID, comicNum=2) {
             }
         }
         else if (btnID=="randBtn") {
-            comicNum = Math.floor(Math.random() * 10000) + 1;
+            comicNum = Math.floor(Math.random() * 2000) + 1;
             updateComics('prevBtn', comicNum);
             updateComics('randBtn', comicNum);
             updateComics('nextBtn', comicNum);
