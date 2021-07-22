@@ -24,12 +24,11 @@ function getComicAlt(item) {
 }
 
 
-async function updateComics(btnID) {
+async function updateComics(btnID, comicNum) {
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
     const loading = document.querySelector("#loadingDiv")
-    let comicNum = 2;
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID=="prevBtn") {
@@ -66,6 +65,7 @@ async function updateComics(btnID) {
         });
 }
 
+let comicNum = 2;
 updateComics('prevBtn');
 updateComics('randBtn');
 updateComics('nextBtn');
