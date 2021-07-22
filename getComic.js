@@ -32,7 +32,7 @@ async function updateComics(btnID) {
     let comicNum = 2;
 
     btn.addEventListener('click', function onButtonClick() {
-        if (btnID="prevBtn") {
+        if (btnID=="prevBtn") {
             if (comicNum > 3) {
                 comicNum -=1;
             }
@@ -40,10 +40,10 @@ async function updateComics(btnID) {
                 comicNum = 2;
             }
         }
-        else if (btnID="randBtn") {
+        else if (btnID=="randBtn") {
             comicNum = Math.floor(Math.random() * 10000) + 1;
         }
-        else if (btnID="nextBtn") {
+        else if (btnID=="nextBtn") {
             comicNum += 1
         }
     })
