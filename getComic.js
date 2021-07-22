@@ -28,6 +28,7 @@ async function updateComics(btnID) {
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
+    const loading = document.querySelector("#loadingDiv")
     let comicNum = 2;
 
     btn.addEventListener('click', function onButtonClick() {
@@ -48,10 +49,10 @@ async function updateComics(btnID) {
     })
 
     
-    $("#loadingDiv").show()
+    loading.show();
     await getComic(comicNum)
         .then((data) => {
-            $("loadingDiv").hide().delay(2000);
+            loading.hide().delay(2000);
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
