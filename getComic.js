@@ -34,16 +34,28 @@ async function updateComics(btnID, comicNum=2) {
         if (btnID=="prevBtn") {
             if (comicNum > 3) {
                 comicNum -=1;
+                updateComics('prevBtn', comicNum);
+                updateComics('randBtn', comicNum);
+                updateComics('nextBtn', comicNum);
             }
             else {
                 comicNum = 2;
+                updateComics('prevBtn', comicNum);
+                updateComics('randBtn', comicNum);
+                updateComics('nextBtn', comicNum);
             }
         }
         else if (btnID=="randBtn") {
             comicNum = Math.floor(Math.random() * 10000) + 1;
+            updateComics('prevBtn', comicNum);
+            updateComics('randBtn', comicNum);
+            updateComics('nextBtn', comicNum);
         }
         else if (btnID=="nextBtn") {
             comicNum += 1
+            updateComics('prevBtn', comicNum);
+            updateComics('randBtn', comicNum);
+            updateComics('nextBtn', comicNum);
         }
     })
 
