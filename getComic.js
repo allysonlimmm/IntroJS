@@ -61,6 +61,7 @@ async function updateComics(btnID, comicNum=2) {
 
     
     loading.classList.remove("hidden")
+    comicList.innerHTML = '';
     await getComic(comicNum)
         .then((data) => {
             loading.classList.add("hidden");
