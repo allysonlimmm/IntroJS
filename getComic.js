@@ -79,7 +79,6 @@ async function updateComics(btnID, comicNum=2) {
         });
 }
 
-let comicNum = 2;
 updateComics('prevBtn', comicNum);
 updateComics('randBtn', comicNum);
 updateComics('nextBtn', comicNum);
