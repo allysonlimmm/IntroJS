@@ -25,15 +25,15 @@ function getComicAlt(item) {
     return comicAlt
 }
 
-function validation() {
-    let x = Number(document.getElementById("comicNum").value);
-    if (x <= 2496 || x >= 1) {
-        return x;
-    }
-    else {
-        alert("Invalid number")
-    }
-}
+// function validation() {
+//     let x = Number(document.getElementById("comicNum").value);
+//     if (x <= 2496 || x >= 1) {
+//         return x;
+//     }
+//     else {
+//         alert("Invalid number")
+//     }
+// }
 
 async function updateComics(btnID, comicNum) {
 
@@ -44,9 +44,9 @@ async function updateComics(btnID, comicNum) {
     const comicNumSelector = document.querySelector("#comicNum");
     const submit = document.querySelector('#submit');
     
-    submit.addEventListener('click', function onButtonClick() {
-        comicNum = validation()
-    })    
+    // submit.addEventListener('click', function onButtonClick() {
+    //     comicNum = validation()
+    // })    
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID==="prevBtn") {
