@@ -33,7 +33,7 @@ async function updateComics(btnID, comicNum=2) {
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID=="prevBtn") {
-            if (comicNum > 3) {
+            if (comicNum >= 3) {
                 comicNum -=1;
             }
             else {
