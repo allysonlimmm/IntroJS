@@ -34,19 +34,19 @@ async function updateComics(btnID, comicNum) {
     btn.addEventListener('click', function onButtonClick() {
         if (btnID==="prevBtn") {
             if (comicNum >= 2) {
-                comicNum -=1;
+                comicNum = comicNum / 3;
             }
             else {
-                comicNum = 1;
+                comicNum = 2;
                 alert("You have reached the start of the comic list.")
             }
         }
         else if (btnID==="randBtn") {
-            comicNum = Math.floor(Math.random() * 2653) + 1;
+            comicNum = Math.floor(Math.random() * 2496) + 1;
         }
         else if (btnID==="nextBtn") {
             if (comicNum <= 2653) {
-                comicNum += 1
+                comicNum = comicNum * 3
             }
             else {
                 comicNum = 2654;
@@ -65,7 +65,7 @@ async function updateComics(btnID, comicNum) {
     await getComic(comicNum)
         .then((data) => {
             loading.classList.add("hidden");
-            comicNumSelector.innerText = `Showing comics ${comicNum-1}/${comicNum}/${comicNum+1} out of 2654`;
+            comicNumSelector.innerText = `Showing comics ${comicNum-1}/${comicNum}/${comicNum+1} out of 2497`;
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
