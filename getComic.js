@@ -39,8 +39,8 @@ async function updateComics(btnID) {
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID==="prevBtn") {
-            if (comicNum >= 2) {
-                comicNum = comicNum / 3;
+            if (comicNum >= 5) {
+                comicNum = comicNum - 3;
             }
             else {
                 comicNum = 2;
@@ -51,8 +51,8 @@ async function updateComics(btnID) {
             comicNum = Math.floor(Math.random() * 2496) + 1;
         }
         else if (btnID==="nextBtn") {
-            if (comicNum <= 2653) {
-                comicNum = comicNum * 3
+            if (comicNum <= 2492) {
+                comicNum = comicNum + 3
             }
             else {
                 comicNum = 2654;
