@@ -1,3 +1,5 @@
+const internal = require("assert");
+
 // GETTING COMIC //
 async function getComic(comicNum) {
     let dataList = [];
@@ -23,6 +25,15 @@ function getComicAlt(item) {
     return comicAlt
 }
 
+function validation() {
+    let x = document.getElementById("comicNum").value;
+    if (typeof x == 'number' && (x <= 2496 || x >= 1)) {
+        return x;
+    }
+    else {
+        alert("Invalid number")
+    }
+}
 
 async function updateComics(btnID, comicNum) {
 
@@ -34,7 +45,7 @@ async function updateComics(btnID, comicNum) {
     const submit = document.querySelector('#submit');
     
     submit.addEventListener('click', function onButtonClick() {
-        comicNum = document.getElementById("submit").onclick;
+        comicNum = validation()
     })    
 
     btn.addEventListener('click', function onButtonClick() {
