@@ -77,7 +77,7 @@ async function updateComics(btnID, comicNum=2) {
     await getComic(comicNum)
         .then((data) => {
             loading.classList.add("hidden");
-            comicNumSelector.innerText = `${comucNum} out of 2654`;
+            comicNumSelector.innerText = `${comicNum} out of 2654`;
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
