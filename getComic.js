@@ -24,7 +24,7 @@ function getComicAlt(item) {
 }
 
 
-async function updateComics(btnID, comicNum) {
+async function updateComics(btnID) {
     let comicNum = 2;
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
@@ -60,9 +60,9 @@ async function updateComics(btnID, comicNum) {
             }
             
         }
-        updateComics('prevBtn', comicNum);
-        updateComics('randBtn', comicNum);
-        updateComics('nextBtn', comicNum);
+        updateComics('prevBtn');
+        updateComics('randBtn');
+        updateComics('nextBtn');
     })
 
     
