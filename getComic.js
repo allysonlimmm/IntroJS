@@ -28,7 +28,8 @@ async function updateComics(btnID, comicNum=2) {
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
-    const loading = document.querySelector("#loadingDiv")
+    const loading = document.querySelector("#loadingDiv");
+    const comicNumSelector = document.querySelector("#comicNum");
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID=="prevBtn") {
@@ -40,22 +41,33 @@ async function updateComics(btnID, comicNum=2) {
             }
             else {
                 comicNum = 2;
+                alert("You have reached the start of the comic list.")
                 updateComics('prevBtn', comicNum);
                 updateComics('randBtn', comicNum);
                 updateComics('nextBtn', comicNum);
             }
         }
         else if (btnID=="randBtn") {
-            comicNum = Math.floor(Math.random() * 2000) + 1;
+            comicNum = Math.floor(Math.random() * 2654) + 1;
             updateComics('prevBtn', comicNum);
             updateComics('randBtn', comicNum);
             updateComics('nextBtn', comicNum);
         }
         else if (btnID=="nextBtn") {
-            comicNum += 1
-            updateComics('prevBtn', comicNum);
-            updateComics('randBtn', comicNum);
-            updateComics('nextBtn', comicNum);
+            if (comicNum <= 2652) {
+                comicNum += 1
+                updateComics('prevBtn', comicNum);
+                updateComics('randBtn', comicNum);
+                updateComics('nextBtn', comicNum);
+            }
+            else {
+                comicNum = 2653;
+                alert("You have reached the end of the comic list.")
+                updateComics('prevBtn', comicNum);
+                updateComics('randBtn', comicNum);
+                updateComics('nextBtn', comicNum);
+            }
+            
         }
     })
 
@@ -65,6 +77,7 @@ async function updateComics(btnID, comicNum=2) {
     await getComic(comicNum)
         .then((data) => {
             loading.classList.add("hidden");
+            comicNumSelector.innerText = `${comucNum} out of 2654`
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
