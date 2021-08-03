@@ -79,6 +79,7 @@ async function updateComics(btnID, comicNum=2) {
         });
 }
 
+let comicNum;
 updateComics('prevBtn', comicNum);
 updateComics('randBtn', comicNum);
 updateComics('nextBtn', comicNum);
