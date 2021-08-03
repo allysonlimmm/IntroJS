@@ -32,7 +32,7 @@ async function updateComics(btnID, comicNum) {
     const comicNumSelector = document.querySelector("#comicNum");
 
     btn.addEventListener('click', function onButtonClick() {
-        if (btnID=="prevBtn") {
+        if (btnID==="prevBtn") {
             if (comicNum >= 2) {
                 comicNum -=1;
             }
@@ -41,10 +41,10 @@ async function updateComics(btnID, comicNum) {
                 alert("You have reached the start of the comic list.")
             }
         }
-        else if (btnID=="randBtn") {
+        else if (btnID==="randBtn") {
             comicNum = Math.floor(Math.random() * 2653) + 1;
         }
-        else if (btnID=="nextBtn") {
+        else if (btnID==="nextBtn") {
             if (comicNum <= 2653) {
                 comicNum += 1
             }
