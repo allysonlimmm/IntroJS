@@ -25,11 +25,17 @@ function getComicAlt(item) {
 
 
 async function updateComics(btnID, comicNum) {
+    let comicNum = 2;
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
     const loading = document.querySelector("#loadingDiv");
     const comicNumSelector = document.querySelector("#comicNum");
+    const submit = document.querySelector('#submit');
+    
+    submit.addEventListener('click', function onButtonClick() {
+        comicNum = document.getElementById("comicNum").value;
+    })    
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID==="prevBtn") {
@@ -81,7 +87,7 @@ async function updateComics(btnID, comicNum) {
 
 }
 
-let comicNum=2;
-updateComics('prevBtn', comicNum);
-updateComics('randBtn', comicNum);
-updateComics('nextBtn', comicNum);
+
+updateComics('prevBtn');
+updateComics('randBtn');
+updateComics('nextBtn');
