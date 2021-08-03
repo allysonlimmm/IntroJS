@@ -42,7 +42,7 @@ async function updateComics(btnID, comicNum) {
     const btn = document.querySelector(`#${btnID}`);
     const loading = document.querySelector("#loadingDiv");
     const comicNumSelector = document.querySelector("#comicNum");
-    const submit = document.querySelector('#submit');
+    // const submit = document.querySelector('#submit');
     
     // submit.addEventListener('click', function onButtonClick() {
     //     comicNum = validation()
