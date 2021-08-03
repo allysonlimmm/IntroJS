@@ -48,7 +48,7 @@ async function updateComics(btnID, comicNum=2) {
             }
         }
         else if (btnID=="randBtn") {
-            comicNum = Math.floor(Math.random() * 2654) + 1;
+            comicNum = Math.floor(Math.random() * 2653) + 1;
             updateComics('prevBtn', comicNum);
             updateComics('randBtn', comicNum);
             updateComics('nextBtn', comicNum);
@@ -77,7 +77,7 @@ async function updateComics(btnID, comicNum=2) {
     await getComic(comicNum)
         .then((data) => {
             loading.classList.add("hidden");
-            comicNumSelector.innerText = `${comucNum} out of 2654`
+            comicNumSelector.innerText = `${comucNum} out of 2654`;
             comicList.innerHTML = '';
             data.forEach((comic) => {
                 const item = document.createElement("div");
