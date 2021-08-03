@@ -26,8 +26,8 @@ function getComicAlt(item) {
 }
 
 function validation() {
-    let x = document.getElementById("comicNum").value;
-    if (typeof x == 'number' && (x <= 2496 || x >= 1)) {
+    let x = Number(document.getElementById("comicNum").value);
+    if (x <= 2496 || x >= 1) {
         return x;
     }
     else {
