@@ -33,11 +33,11 @@ async function updateComics(btnID, comicNum=2) {
 
     btn.addEventListener('click', function onButtonClick() {
         if (btnID=="prevBtn") {
-            if (comicNum >= 3) {
+            if (comicNum >= 2) {
                 comicNum -=1;
             }
             else {
-                comicNum = 2;
+                comicNum = 1;
                 alert("You have reached the start of the comic list.")
             }
         }
@@ -45,11 +45,11 @@ async function updateComics(btnID, comicNum=2) {
             comicNum = Math.floor(Math.random() * 2653) + 1;
         }
         else if (btnID=="nextBtn") {
-            if (comicNum <= 2652) {
+            if (comicNum <= 2653) {
                 comicNum += 1
             }
             else {
-                comicNum = 2653;
+                comicNum = 2654;
                 alert("You have reached the end of the comic list.")
             }
             
