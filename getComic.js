@@ -24,8 +24,8 @@ function getComicAlt(item) {
 }
 
 
-async function updateComics(btnID) {
-    let comicNum = 2;
+async function updateComics(btnID, comicNum) {
+
     const comicList = document.querySelector('#comicList');
     const comicTitle = document.querySelector('#comicTitle');
     const btn = document.querySelector(`#${btnID}`);
@@ -60,9 +60,9 @@ async function updateComics(btnID) {
             }
             
         }
-        updateComics('prevBtn');
-        updateComics('randBtn');
-        updateComics('nextBtn');
+        updateComics('prevBtn', comicNum);
+        updateComics('randBtn', comicNum);
+        updateComics('nextBtn', comicNum);
     })
 
     
@@ -87,7 +87,7 @@ async function updateComics(btnID) {
 
 }
 
-
-updateComics('prevBtn');
-updateComics('randBtn');
-updateComics('nextBtn');
+let comicNum = 2;
+updateComics('prevBtn', comicNum);
+updateComics('randBtn', comicNum);
+updateComics('nextBtn', comicNum);
