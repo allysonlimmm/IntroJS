@@ -1,4 +1,4 @@
-const MAX_COMIC = 2497;
+const MAX_COMIC = 2475;
 
 // GETTING COMIC //
 async function getComic(comicNum) {
