@@ -81,7 +81,7 @@ async function updateComics(btnID, comicNum) {
 
 }
 
-let comicNum;
+let comicNum=2;
 updateComics('prevBtn', comicNum);
 updateComics('randBtn', comicNum);
 updateComics('nextBtn', comicNum);
