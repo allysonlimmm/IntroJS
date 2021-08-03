@@ -34,7 +34,7 @@ async function updateComics(btnID) {
     const submit = document.querySelector('#submit');
     
     submit.addEventListener('click', function onButtonClick() {
-        comicNum = document.getElementById("submit").value;
+        comicNum = document.getElementById("submit").onclick;
     })    
 
     btn.addEventListener('click', function onButtonClick() {
