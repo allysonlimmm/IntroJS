@@ -54,7 +54,9 @@ async function updateComics(btnID, comicNum=2) {
             }
             
         }
-
+        updateComics('prevBtn', comicNum);
+        updateComics('randBtn', comicNum);
+        updateComics('nextBtn', comicNum);
     })
 
     
@@ -76,9 +78,7 @@ async function updateComics(btnID, comicNum=2) {
             comicTitle.innerText = getComicTitle(data[1]);
         });
     
-    updateComics('prevBtn', comicNum);
-    updateComics('randBtn', comicNum);
-    updateComics('nextBtn', comicNum);
+
 }
 
 let comicNum;
